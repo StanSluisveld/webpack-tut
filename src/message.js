@@ -1,4 +1,4 @@
 module.exports = {
-    hi: 'hoinicky`',
-    event: 'coolboy'
+    hi: 'foo',
+    event: 'bar'
 }
