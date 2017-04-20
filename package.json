@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --watch"
-
+    "build": "cross-env NODE_ENV=production webpack",
+    "dev:hot": "cross-env NODE_ENV=development webpack-dev-server",
+    "dev:module": "cross-env NODE_ENV=development node dev-server.js"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    
-  },
+  "dependencies": {},
   "devDependencies": {
-    "webpack": "^2.1.0-beta.25"
+    "cross-env": "^4.0.0",
+    "webpack": "^2.1.0-beta.25",
+    "webpack-dev-server": "^2.1.0-beta.10"
   }
 }
