@@ -13,10 +13,19 @@ var entry = PRODUCTION
     ];
 
 var plugins = PRODUCTION
-    ? []
+    ? [
+            new webpack.optimize.UglifyJsPlugin({
+                comments: true,
+                mangle: false,
+                compress: {
+                   warnings: true 
+                }
+            })
+    ]
     : [ new webpack.HotModuleReplacementPlugin() ];
 
 module.exports = {
+    devtool: 'source-map',
     entry: entry,
     plugins: plugins,
     module: {
