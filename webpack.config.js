@@ -13,7 +13,15 @@ var entry = PRODUCTION
     ];
 
 var plugins = PRODUCTION
-    ? []
+    ? [
+            new webpack.optimize.UglifyJsPlugin({
+                comments: true,
+                mangle: false,
+                compress: {
+                   warnings: true 
+                }
+            })
+    ]
     : [ new webpack.HotModuleReplacementPlugin() ];
 
 module.exports = {

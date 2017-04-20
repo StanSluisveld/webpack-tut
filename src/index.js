@@ -1,7 +1,7 @@
 var messages = require('./message.js');
 import {multiply} from './someFunction'
 
-//var newMessage = () => (`<p>${messages.foo} ${messages.event}</p>`);
+//var newMessage = () => (`<p>${messages.foo} ${messages.bar}</p>`);
 
 const newMessage = () => (multiply(4, 3));
 
