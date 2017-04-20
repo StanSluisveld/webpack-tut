@@ -4,15 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --watch"
-
+    "build": "webpack",
+    "dev:hot": "webpack-dev-server", 
+    "dev:module": "node dev-server.js"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    
-  },
+  "dependencies": {},
   "devDependencies": {
-    "webpack": "^2.1.0-beta.25"
+    "webpack": "^2.1.0-beta.25",
+    "webpack-dev-server": "^2.1.0-beta.10"
   }
 }
